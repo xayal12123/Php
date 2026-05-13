@@ -1,0 +1,52 @@
+/* app/globals.css */
+:root {
+    --brand-start: #0071bc;
+    --brand-end: #29abe2;
+    --brand-gradient: linear-gradient(135deg, var(--brand-start), var(--brand-end));
+    --brand-start-hover: #005f9c;
+    --brand-end-hover: #1b9bd0;
+    --brand-gradient-hover: linear-gradient(135deg, var(--brand-start-hover), var(--brand-end-hover));
+    --surface: #ffffff;
+    --text-strong: #1f2a37;
+    --border-soft: #dde6ef;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* sidebar.css daxilindəki əsas qaydalar */
+#sidebar {
+    min-width: 260px;
+    max-width: 260px;
+    background: var(--brand-gradient);
+    color: white;
+    transition: all 0.3s;
+    height: 100vh;
+    box-shadow: 2px 0 16px rgba(0, 55, 102, 0.2);
+    padding: 14px 12px 20px;
+    overflow-y: auto;
+}
+
+#sidebar .nav-link {
+    color: white;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+#sidebar .active-submenu {
+    background: rgba(255, 255, 255, 0.24) !important;
+    font-weight: 600;
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Sidebar açıldıqda ikonun dönməsi üçün */
+.nav-link[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+}
+
